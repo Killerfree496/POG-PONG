@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="35.0" prefWidth="198.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.classes.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <ButtonBar prefHeight="35.0" prefWidth="191.0" GridPane.rowIndex="1">
+        <buttons>
+            <CheckBox mnemonicParsing="false" prefHeight="16.0" prefWidth="81.0" text="CheckBox" />
+          <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" text="Button" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</GridPane>
