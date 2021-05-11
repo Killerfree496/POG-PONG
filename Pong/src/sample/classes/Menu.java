@@ -13,7 +13,7 @@ public class Menu extends JFrame{
         new Menu();
     }
 
-    //Konstruktor
+
     public Menu(){
         super("POG PONG-IM MENU");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -21,21 +21,23 @@ public class Menu extends JFrame{
         pack();
         setLocationRelativeTo(null);
         setVisible(true);
+        setSize(400,200);
+        setResizable(true);
+
     }
 
     private JPanel createMenuPanel() {
         JPanel panel = new JPanel(new GridLayout(0, 1));
-
+        JOptionPane.showMessageDialog(null, "Herzlich Willkommen! Hab eine schöne Zeit");
         JButton start = new JButton("Start POG PONG");
         start.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "Das Game startet direkt! Also mach dich Bereit! Steuern mit Pfeiltasten und W S");
                 GameFrame frame = new GameFrame();
+
             }
 
-            private void dispose() {
-                setVisible(false);
-            }
 
         });
 
@@ -57,8 +59,10 @@ public class Menu extends JFrame{
         });
 
         panel.add(start);
-        panel.add(close);
         panel.add(SOON);
+        panel.add(close);
+
         return panel;
     }
+
 }
