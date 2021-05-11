@@ -1,5 +1,7 @@
 package sample.classes;
 
+import sample.classes.Snake.TicGUI;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -13,7 +15,7 @@ public class Menu extends JFrame{
 
     //Konstruktor
     public Menu(){
-        super("Name");
+        super("POG PONG-IM MENU");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         add(createMenuPanel());
         pack();
@@ -24,16 +26,15 @@ public class Menu extends JFrame{
     private JPanel createMenuPanel() {
         JPanel panel = new JPanel(new GridLayout(0, 1));
 
-        JButton start = new JButton("Start");
+        JButton start = new JButton("Start POG PONG");
         start.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                this.dispose();
                 GameFrame frame = new GameFrame();
-
             }
 
             private void dispose() {
+                setVisible(false);
             }
 
         });
@@ -42,12 +43,22 @@ public class Menu extends JFrame{
         close.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.exit(0);
+             System.exit(1);
+            }
+        });
+
+        JButton SOON = new JButton("TicTacToe (SOON)");
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                TicGUI ticTacToe = new TicGUI();
+
             }
         });
 
         panel.add(start);
         panel.add(close);
+        panel.add(SOON);
         return panel;
     }
 }
