@@ -1,7 +1,5 @@
 package sample.classes;
 
-import sample.classes.Snake.TicGUI;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -53,13 +51,21 @@ public class Menu extends JFrame{
         close.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                TicGUI ticTacToe = new TicGUI();
+
+
+            }
+        });
+        JButton Test = new JButton("Pong Test Version");
+        Test.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                TestPong testp = new TestPong();
 
             }
         });
 
         panel.add(start);
-        panel.add(SOON);
+        panel.add(Test);
         panel.add(close);
 
         return panel;

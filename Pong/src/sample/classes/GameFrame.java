@@ -4,8 +4,9 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 
-public class GameFrame extends JFrame{
+public class GameFrame extends JFrame {
 
         GamePanel panel;
 
@@ -32,11 +33,17 @@ public class GameFrame extends JFrame{
                 JMenuItem item2 = new JMenuItem("Exit");
                 menu.add(item2);
                 setJMenuBar(bar);
+                JMenuItem item3 = new JMenuItem("MUSIC ON");
+                menu.add(item3);
+                setJMenuBar(bar);
+                JMenuItem item4 = new JMenuItem("SOON");
+                menu.add(item4);
+                setJMenuBar(bar);
 
                 item.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent e) {
-
-                                setBackground(Color.red);
+                                //background ändern
+                                setBackground(Color.gray);
 
                         }
                 });
@@ -48,6 +55,14 @@ public class GameFrame extends JFrame{
 
                         }
                 });
+                item3.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(ActionEvent e) {
+                                new PlaySound();
+
+
+                        }
+                });
+
 
         }
 }
